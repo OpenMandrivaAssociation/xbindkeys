@@ -10,6 +10,7 @@ Group:		System/X11
 URL:		http://hocwp.free.fr/xbindkeys/xbindkeys.html
 Source:		http://hocwp.free.fr/xbindkeys/%{name}-%{version}.tar.bz2
 Patch0:         xbindkeys-1.7.3-rplmalloc.patch
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	X11-devel guile-devel
 # (for xbindkey_show)
 Requires:	tk
