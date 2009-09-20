@@ -1,5 +1,5 @@
 %define	version	1.8.3
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 Summary:	Link keyboard and mouse input events with shell commands
 Name:		xbindkeys
