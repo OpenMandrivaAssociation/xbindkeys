@@ -1,17 +1,12 @@
-%define	version	1.8.3
-%define release	%mkrel 3
-
 Summary:	Link keyboard and mouse input events with shell commands
 Name:		xbindkeys
-Version:	%{version}
-Release:	%{release}
+Version:	1.8.5
+Release:	1
 License:	GPL
 Group:		System/X11
 URL:		http://hocwp.free.fr/xbindkeys/xbindkeys.html
-Source:		http://hocwp.free.fr/xbindkeys/%{name}-%{version}.tar.bz2
-Patch0:         xbindkeys-1.7.3-rplmalloc.patch
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	libx11-devel guile-devel
+Source:		%{name}-%{version}.tar.gz
+BuildRequires:	libx11-devel 
 # (for xbindkey_show)
 Requires:	tk
 
@@ -23,18 +18,15 @@ window manager and can capture all keyboard keys (e.g. Power, Wake...).
 
 %prep
 %setup -q
-%patch0 -b .rplmalloc
 
-%build
-%configure2_5x
+
+%build 
+%configure  --disable-guile
 %make
 
 %install
-rm -rf %{buildroot}
-%makeinstall_std
+%makeinstall
 
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -46,6 +38,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Jan 28 2013 Alexandr betkher <betkher.al@mail.ru> 1.8.5-1
+
 * Sun Sep 20 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.8.3-3mdv2010.0
 + Revision: 445887
 - rebuild
@@ -91,4 +85,3 @@ rm -rf %{buildroot}
 
 * Wed Apr 27 2005 Abel Cheung <deaddog@mandriva.org> 1.7.1-1mdk
 - First Mandriva Linux package
-
