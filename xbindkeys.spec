@@ -1,7 +1,7 @@
 Summary:	Link keyboard and mouse input events with shell commands
 Name:		xbindkeys
 Version:	1.8.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		System/X11
 URL:		http://hocwp.free.fr/xbindkeys/xbindkeys.html
