@@ -6,7 +6,7 @@ License:	GPL
 Group:		System/X11
 URL:		http://hocwp.free.fr/xbindkeys/xbindkeys.html
 Source:		%{name}-%{version}.tar.gz
-BuildRequires:	libx11-devel 
+BuildRequires:	pkgconfig(x11) 
 # (for xbindkey_show)
 Requires:	tk
 
