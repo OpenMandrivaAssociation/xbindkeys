@@ -4,7 +4,7 @@ Version:	1.8.7
 Release:	1
 License:	GPL
 Group:		System/X11
-URL:		http://hocwp.free.fr/xbindkeys/xbindkeys.html
+URL:		https://hocwp.free.fr/xbindkeys/xbindkeys.html
 Source:		%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(x11) 
 # (for xbindkey_show)
