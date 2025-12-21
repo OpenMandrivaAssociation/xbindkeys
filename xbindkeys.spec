@@ -6,6 +6,11 @@ License:	GPL
 Group:		System/X11
 URL:		https://hocwp.free.fr/xbindkeys/xbindkeys.html
 Source:		%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11) 
 BuildRequires:  pkgconfig(guile-1.8)
 # (for xbindkey_show)
